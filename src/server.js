@@ -8,12 +8,12 @@ const cors = require("cors")
 connectToDatabase();
 
 const app = express();
-const PORT = 3690;
+const  door = 3690;
 
 app.use(cors())
 app.use(express.json())
 app.use(routes);
 
 app.listen(PORT, () =>{
-    console.log(`⚡ Server running on http://localhost:${PORT}`);
-})
+    console.log(`⚡ Server running on http://localhost:${process.env.PORT || door}`);
+}) 
